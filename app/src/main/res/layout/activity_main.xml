@@ -1,138 +1,322 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/buttonRead"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Read"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editTextInput"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.047" />
-
-    <EditText
-        android:id="@+id/editTextInput"
-        android:layout_width="184dp"
-        android:layout_height="38dp"
-        android:ems="10"
-        android:hint="Enter a number"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonRead"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.054" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextInput"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="78dp"
-        android:layout_height="71dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonImage2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonImage1"
-        app:layout_constraintTop_toBottomOf="@+id/editTextInput"
-        app:layout_constraintVertical_bias="0.092"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
-
-    <Button
-        android:id="@+id/buttonImage1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Image1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextInput"
-        app:layout_constraintVertical_bias="0.109" />
-
-    <Button
-        android:id="@+id/buttonImage2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Image2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRead"
-        app:layout_constraintVertical_bias="0.104" />
-
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.074" />
-
-    <Button
-        android:id="@+id/buttonGoster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Goster"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
-        app:layout_constraintVertical_bias="0.953" />
-
-    <com.google.android.material.button.MaterialButtonToggleGroup
-        android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
-        app:singleSelection="true">
+        tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/buttonYemek"
-            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/buttonDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yemekler" />
+            android:text="Dialog"
+            app:layout_constraintBottom_toTopOf="@+id/buttonSaat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonSnackbar"
+            app:layout_constraintTop_toBottomOf="@+id/slider"
+            app:layout_constraintVertical_bias="0.5" />
 
         <Button
-            android:id="@+id/buttonIcecek"
-            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/buttonSnackbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="İçecekler" />
+            android:text="Snackbar"
+            app:layout_constraintBottom_toTopOf="@+id/editTextSaat"
+            app:layout_constraintEnd_toStartOf="@+id/buttonDialog"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonToast"
+            app:layout_constraintTop_toBottomOf="@+id/slider"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/editTextTarih"
+            android:layout_width="158dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:ems="10"
+            android:hint="tarih"
+            android:inputType="text"
+            android:textSize="9dp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonGoster"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSaat" />
 
         <Button
-            android:id="@+id/buttonTatlı"
-            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/buttonTarih"
+            android:layout_width="93dp"
+            android:layout_height="29dp"
+            android:text="Tarih"
+            android:textSize="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonGoster"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSaat" />
+
+        <Button
+            android:id="@+id/buttonRead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tatlılar" />
-    </com.google.android.material.button.MaterialButtonToggleGroup>
+            android:text="Read"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/editTextInput"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.047" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/editTextInput"
+            android:layout_width="184dp"
+            android:layout_height="38dp"
+            android:ems="10"
+            android:hint="Enter a number"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonRead"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.054" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/editTextInput"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.067" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="78dp"
+            android:layout_height="71dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonImage2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonImage1"
+            app:layout_constraintTop_toBottomOf="@+id/editTextInput"
+            app:layout_constraintVertical_bias="0.092"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <Button
+            android:id="@+id/buttonImage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextInput"
+            app:layout_constraintVertical_bias="0.109" />
+
+        <Button
+            android:id="@+id/buttonImage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRead"
+            app:layout_constraintVertical_bias="0.104" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.074" />
+
+        <Button
+            android:id="@+id/buttonGoster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="Goster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch1"
+            app:singleSelection="true">
+
+            <Button
+                android:id="@+id/buttonYemek"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yemekler" />
+
+            <Button
+                android:id="@+id/buttonIcecek"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="İçecekler" />
+
+            <Button
+                android:id="@+id/buttonTatlı"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tatlılar" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toggleButton">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Ülkeler">
+
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonBasla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Başla"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/progressBar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintVertical_bias="0.07" />
+
+        <Button
+            android:id="@+id/buttonDur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dur"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/progressBar"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintVertical_bias="0.067" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/buttonGoster"
+            app:layout_constraintEnd_toStartOf="@+id/buttonDur"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonBasla"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintVertical_bias="0.097" />
+
+        <SeekBar
+            android:id="@+id/slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:max="100"
+            android:progress="30"
+            app:layout_constraintBottom_toTopOf="@+id/buttonGoster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSlider" />
+
+        <TextView
+            android:id="@+id/textViewSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <Button
+            android:id="@+id/buttonSaat"
+            android:layout_width="93dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="80dp"
+            android:text="Saat"
+            android:textSize="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonTarih"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonGoster"
+            app:layout_constraintTop_toBottomOf="@+id/slider"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/editTextSaat"
+            android:layout_width="158dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="80dp"
+            android:ems="10"
+            android:hint="saat"
+            android:inputType="text"
+            android:textSize="9dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTarih"
+            app:layout_constraintEnd_toStartOf="@+id/buttonGoster"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/buttonToast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toast"
+            app:layout_constraintBottom_toTopOf="@+id/editTextSaat"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSnackbar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
