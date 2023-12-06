@@ -4,5 +4,5 @@ First Commit
 
 <div>
   <img src="first_version_screen_shot.png" alt="vers_1" width="200"/>
-<img src="ssfinal.png" alt="vers_1" width="200"/>
+<img src="ss-final.png" alt="vers_1" width="200"/>
 </div>
